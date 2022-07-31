@@ -5,4 +5,5 @@ body {
   -moz-osx-font-smoothing: grayscale;
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+  background-color: rgb(165, 168, 212);
 }
