@@ -46,6 +46,15 @@ const Pane = styled.div`
   padding: 0.5rem;
 `;
 
+const VimPane = styled.div`
+  border: 0.1rem solid black;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0.5rem;
+  background-color: #ffffff;
+`;
+
 const InnerPane = styled.div`
   display: flex;
   justify-content: center;
@@ -114,9 +123,9 @@ function App() {
         </Pane>
 
         <InnerPane>
-          <Pane>
+          <VimPane>
             <PaneTitle>
-              &#8594; Educational Background
+              Educational Background
             </PaneTitle>
 
             <PaneText>
@@ -129,7 +138,7 @@ function App() {
               Scientific Baccalaureate (High School diploma)
               Sainte Marie du Port High School, Les Sables d'Olonne, France
             </PaneText>
-          </Pane>
+          </VimPane>
 
           <Pane>
             <PaneTitle>
@@ -165,7 +174,7 @@ function App() {
 
       <BottomBanner>
         <BannerText>
-          [0] 0:zsh
+          [tmux_cv] 0:about_me
         </BannerText>
 
         <BannerText>
