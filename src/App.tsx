@@ -14,18 +14,18 @@ const Border = styled.div`
   @media (min-width: 768px) {
     flex-direction: row;
   }
-
-  @media (min-width: 1100px) {
-    max-width: 1024px;
-    margin: auto;
-    margin-top: 1rem;
-  }
 `;
 
 const Title = styled.h1`
   color: black;
-  font-size: 1.5em;
+  font-size: 1.5rem;
   font-weight: bold;
+  margin: 0;
+  padding-bottom: 0.5vh;
+
+  @media (min-width: 768px) {
+    font-size: 2.5vw;
+  }
 `;
 
 const BottomBanner = styled.div`
@@ -37,16 +37,19 @@ const BottomBanner = styled.div`
   justify-content: space-between;
   align-items: center;
 
-  @media (min-width: 1100px) {
-    max-width: 1024px;
-    margin: auto;
+  @media (min-width: 768px) {
+    height: 2vw;
   }
 `;
 
 const BannerText = styled.p`
   color: #ffffff;
   font-size: 0.5rem;
-  padding: 0 0.2rem;
+  padding: 0 0.2vw;
+
+  @media (min-width: 768px) {
+    font-size: 1vw;
+  }
 `;
 
 const Pane = styled.div`
@@ -71,6 +74,10 @@ const VimPane = styled.div`
 const StatusBarVim = styled.div`
   font-size: 0.8rem;
   font-weight: bold;
+
+  @media (min-width: 768px) {
+    font-size: 1vw;
+  }
 `;
 
 const InnerPane = styled.div`
@@ -80,24 +87,38 @@ const InnerPane = styled.div`
 `;
 
 const PaneTitle = styled.h2`
-  font-size: 1em;
+  font-size: 1rem;
   font-style: italic;
+  margin: 0;
+  padding-bottom: 0.5vh;
+
+  @media (min-width: 768px) {
+    font-size: 1.5vw;
+  }
 `;
 
 const PaneText = styled.p`
   font-size: 0.7rem;
   margin: 0;
-  padding-bottom: 0.5rem;
+  padding-bottom: 0.5vh;
+
+  @media (min-width: 768px) {
+    font-size: 1vw;
+  }
 `;
 
 const UnderlinePaneText = styled(PaneText)`
   font-size: 0.8rem;
   text-decoration: underline;
+
+  @media (min-width: 768px) {
+    font-size: 1vw;
+  }
 `;
 
 const today = new Date('2000-12-01');
 
-function App() {
+function App(): JSX.Element {
   return (
     <>
       <Border>
@@ -259,7 +280,10 @@ function App() {
 
       <BottomBanner>
         <BannerText>
-          [tmux_cv] 0:about_me
+          [tmux_cv]
+        </BannerText>
+        <BannerText>
+          0:about_me
         </BannerText>
 
         <BannerText>
