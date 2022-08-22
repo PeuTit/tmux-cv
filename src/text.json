@@ -1,0 +1,75 @@
+{
+  "pane_title_1": "Titouan Guiochet",
+  "description": "IT Engineering Student",
+  "sub_pane_title_1": "Hard Skills",
+  "underline_pane_1_text_1": "Languages",
+  "text_1": [
+    "Git / Github",
+    "Scala",
+    "JavaScript / TypeScript / NodeJS",
+    "Ruby / Ruby on Rails / RSpec",
+    "React / Svelte",
+    "Rest / Graphql"
+  ],
+  "underline_pane_1_text_2": "Office technologies && Management tools",
+  "text_2": [
+    "Office suite",
+    "Mac OS / Linux / Windows",
+    "Notion / Confluence / Jira",
+    "French (Mother Tongue)",
+    "English C1 (Toeic: 990/900)",
+    "Driving & Motorcycle license"
+  ],
+  "sub_pane_title_2": "Soft Skills",
+  "text_3": [
+    "Teamwork,",
+    "Communication,",
+    "Leadership,",
+    "Adaptability..."
+  ],
+  "pane_title_2": "Educational Background",
+  "school": [
+    {
+      "title": "CESI Software Engineering School",
+      "location": "La Rochelle, France",
+      "date": "Since 2018, Graduation in 2023",
+      "text": "Innovative way of learning with PBL (Project Based Learning)"
+    },
+    {
+      "title": "Scientific Baccalaureate (High School diploma)",
+      "location": "Sainte Marie du Port High School, Les Sables d'Olonne, France",
+      "date": "From 2015 to 2018"
+    }
+  ],
+  "sub_pane_status_bar": "-- NORMAL --",
+  "pane_title_3": "Work Experiences",
+  "work": [
+    {
+      "title": "Trainee Software Engineer at Lunatech, Netherlands",
+      "date": "July to August 2022",
+      "text": "Integration into a development team for a client project",
+      "technologies": "Technologies: Scala, Play framework"
+    },{
+      "title": "Self-employed Work Placement, Bucharest, Romania",
+      "date": "September 2021 to February 2022",
+      "text": "Creation of a web platform to read Japanese comics",
+      "technologies": "Technologies: Node JS / Graphql / React"
+    }, {
+      "title": "Internship in Software development at Keypup, startup, La Rochelle, France",
+      "date": "January 2021 - april 2021",
+      "text": "Responsible of the development of a VSCode extension",
+      "technologies": "Technologies: Typescript / Svelte"
+    }, {
+      "title": "Internship in software development at Keypup, startup, La Rochelle, France",
+      "date": "March 2020 - July 2020",
+      "text": "Development of the plateform backend and frontend",
+      "technologies": "Technologies : Ruby / Ruby on Rails / React / Typescript"
+    }, {
+      "title": "Barman, the OBBO, Les Sables d'Olonne, France",
+      "date": "Summer 2019"
+    }
+  ],
+  "banner_text_left": "tmux_cv",
+  "banner_text_center": "0: about_me",
+  "banner_text_right": "\"titouan_guiochet\""
+}

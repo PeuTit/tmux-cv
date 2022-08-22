@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components'
+import text from './text.json'
 
 const Border = styled.div`
   margin: 1rem 1rem 0 1rem;
@@ -124,170 +125,117 @@ function App(): JSX.Element {
       <Border>
         <MainPane>
           <Title>
-            &#8594; Titouan Guiochet
+            &#8594; {text.pane_title_1}
           </Title>
 
           <PaneText>
-            &#8594; IT Engineering Student
+            &#8594; {text.description}
           </PaneText>
 
           <PaneTitle>
-            &#8594; Hard Skills
+            &#8594; {text.sub_pane_title_1}
           </PaneTitle>
 
           <UnderlinePaneText>
-          Languages
+            {text.underline_pane_1_text_1}
           </UnderlinePaneText>
-          <PaneText>
-          Git / Github
-          </PaneText>
-          <PaneText>
-          Scala
-          </PaneText>
-          <PaneText>
-          JavaScript / TypeScript / Node JS
-          </PaneText>
-          <PaneText>
-          Ruby / Ruby on Rails / RSpec
-          </PaneText>
-          <PaneText>
-          React / Svelte
-          </PaneText>
-          <PaneText>
-          Rest / Graphql
-          </PaneText>
-
+          <>
+            {text.text_1.map((technology, index) =>
+            <PaneText key={index}>
+              {technology}
+            </PaneText>
+            )}
+          </>
 
           <UnderlinePaneText>
-          Office technology & Management
+            {text.underline_pane_1_text_2}
           </UnderlinePaneText>
-          <PaneText>
-          Office suit
-          </PaneText>
-          <PaneText>
-          Mac OS / Windows / Linux
-          </PaneText>
-          <PaneText>
-          Notion / Confluence / Jira
-          </PaneText>
-
-          <PaneText>
-          French (Mother Tongue)
-          English C1 (Toeic: 990/900)
-          Driving & Motorcycle license
-          </PaneText>
+          <>
+            {text.text_2.map((item, index) =>
+            <PaneText key={index}>
+              {item}
+            </PaneText>
+            )}
+          </>
 
           <PaneTitle>
-            &#8594; Soft Skills
+            &#8594; {text.sub_pane_title_2}
           </PaneTitle>
 
-          <PaneText>
-          Teamwork,
-          Communication,
-          Leadership,
-          Adaptability...
-          </PaneText>
+          <>
+            <PaneText>
+            {text.text_3.map((item) =>
+              item,
+            )}
+            </PaneText>
+          </>
         </MainPane>
 
         <InnerPane>
           <VimPane>
             <PaneText>
-              # Educational Background
+              # {text.pane_title_2}
             </PaneText>
 
-            <PaneText>
-              ## CESI Software Engineering School
-            </PaneText>
-            <PaneText>
-              Since 2018, Graduation in 2023
-            </PaneText>
-            <PaneText>
-              Innovative way of learning with PBL (Project Based Learning)
-            </PaneText>
+            <>
+              {text.school.map((item, index) =>
+              <div key={index}>
+                <PaneText>
+                  ## {item.title}
+                </PaneText>
+                <PaneText>
+                  {item.location}
+                </PaneText>
+                <PaneText>
+                  {item.date}
+                </PaneText>
+                <PaneText>
+                  {item.text}
+                </PaneText>
+              </div>
+              )}
+            </>
 
-            <PaneText>
-              ## Scientific Baccalaureate (High School diploma)
-            </PaneText>
-            <PaneText>
-              Sainte Marie du Port High School, Les Sables d'Olonne, France
-            </PaneText>
-            <StatusBarVim>-- NORMAL --</StatusBarVim>
+            <StatusBarVim>{text.sub_pane_status_bar}</StatusBarVim>
           </VimPane>
 
           <Pane>
             <PaneTitle>
-              &#8594; Work experiences
+              &#8594; {text.pane_title_3}
             </PaneTitle>
 
-            <UnderlinePaneText>
-              Trainee Software Engineer at Lunatech, Netherlands
-            </UnderlinePaneText>
-            <PaneText>
-              July to August 2022
-            </PaneText>
-            <PaneText>
-              Integration into a development team for a client project
-            </PaneText>
-            <PaneText>
-              Technologies: Scala, Play framework
-            </PaneText>
-
-            <UnderlinePaneText>
-              Self-employed Work Placement, Bucharest, Romania
-            </UnderlinePaneText>
-            <PaneText>
-              September 2021 to February 2022
-            </PaneText>
-            <PaneText>
-              Creation of a web platform to read Japanese comics. Technologies: Node JS / Graphql / React
-            </PaneText>
-
-            <UnderlinePaneText>
-              Internship in Software development at Keypup, startup, La Rochelle, France
-            </UnderlinePaneText>
-            <PaneText>
-              January 2021 - april 2021
-            </PaneText>
-            <PaneText>
-              Responsible of the development of a VSCode extension
-            </PaneText>
-            <PaneText>
-              Technologies: Typescript / Svelte
-            </PaneText>
-
-            <UnderlinePaneText>
-              Internship in software development at Keypup, startup, La Rochelle, France
-            </UnderlinePaneText>
-            <PaneText>
-              March 2020 - July 2020
-            </PaneText>
-            <PaneText>
-              Development of the plateform backend and frontend
-            </PaneText>
-            <PaneText>
-              Technologies : Ruby / Ruby on Rails / React / Typescript
-            </PaneText>
-
-            <PaneText>
-              Barman, the OBBO, Les Sables d'Olonne, France
-            </PaneText>
-            <PaneText>
-              Summer 2019
-            </PaneText>
+            <>
+              {text.work.map((item, index) =>
+              <div key={index}>
+                <UnderlinePaneText>
+                  {item.title}
+                </UnderlinePaneText>
+                <PaneText>
+                  {item.date}
+                </PaneText>
+                <PaneText>
+                  {item.text}
+                </PaneText>
+                <PaneText>
+                  {item.technologies}
+                </PaneText>
+              </div>
+              )}
+            </>
           </Pane>
         </InnerPane>
       </Border>
 
       <BottomBanner>
         <BannerText>
-          [tmux_cv]
+          [{text.banner_text_left}]
         </BannerText>
         <BannerText>
-          0:about_me
+          {text.banner_text_center}
         </BannerText>
 
         <BannerText>
-          "titouan-guiochet" {today.toLocaleDateString()}
+          [{text.banner_text_right} | {today.toLocaleDateString()}]
         </BannerText>
       </BottomBanner>
     </>
