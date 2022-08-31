@@ -39,7 +39,7 @@ const BottomBanner = styled.div`
   align-items: center;
 
   @media (min-width: 768px) {
-    height: 2vw;
+    height: 1.5vw;
   }
 `;
 
@@ -49,7 +49,7 @@ const BannerText = styled.p`
   padding: 0 0.2vw;
 
   @media (min-width: 768px) {
-    font-size: 1vw;
+    font-size: 1.2vw;
   }
 `;
 
@@ -94,7 +94,7 @@ const PaneTitle = styled.h2`
   padding-bottom: 0.5vh;
 
   @media (min-width: 768px) {
-    font-size: 1.5vw;
+    font-size: 2vw;
   }
 `;
 
@@ -104,7 +104,7 @@ const PaneText = styled.p`
   padding-bottom: 0.5vh;
 
   @media (min-width: 768px) {
-    font-size: 1vw;
+    font-size: 1.5vw;
   }
 `;
 
@@ -113,7 +113,7 @@ const UnderlinePaneText = styled(PaneText)`
   text-decoration: underline;
 
   @media (min-width: 768px) {
-    font-size: 1vw;
+    font-size: 1.9vw;
   }
 `;
 
@@ -163,11 +163,11 @@ function App(): JSX.Element {
           </PaneTitle>
 
           <>
-            <PaneText>
-            {text.text_3.map((item) =>
-              item,
-            )}
+            {text.text_3.map((item, index) =>
+            <PaneText key={index}>
+              {item}
             </PaneText>
+            )}
           </>
         </MainPane>
 
